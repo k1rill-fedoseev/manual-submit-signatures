@@ -4,8 +4,9 @@ RUN npm i -g serve
 
 WORKDIR /app
 
-COPY public /app/public
+COPY index.js /app/
+COPY index.html /app/
 
 ENTRYPOINT [ "serve" ]
 
-CMD ["public"]
+CMD ["."]
