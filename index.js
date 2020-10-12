@@ -119,6 +119,11 @@ async function submitSignatures() {
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
     const from = accounts[0]
 
+    if (ethereum.chainId && ethereum.chainId !== '0x1') {
+        alert('Please switch you network to Ethereum Mainnet')
+        return
+    }
+
     const txHash = document.getElementById('txHash').value
 
     if (txHash.substr(0, 2) !== '0x' || txHash.length !== 66) {
@@ -172,7 +177,6 @@ async function submitSignatures() {
     const transactionParameters = {
         to: foreignContract.options.address,
         from,
-        value: '0x00',
         data: calldata
     }
 
