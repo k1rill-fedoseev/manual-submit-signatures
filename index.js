@@ -1,5 +1,5 @@
 const homeWeb3 = new Web3('https://dai.poa.network')
-const foreignWeb3 = new Web3('https://mainnet.infura.io/v3/5d7bd94c50ed43fab1cb8e74f58678b0')
+const foreignWeb3 = new Web3('https://mainnet.infura.io/v3/74af54e394254c41b4ab7ae558232044')
 
 const homeAbi = [{
     "anonymous": false,
